@@ -1,0 +1,1434 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>CSEA</title>
+
+        <!-- CSS FILES -->                
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap-icons.css" rel="stylesheet">
+        <link href="/assets/css/templatemo-tiya-golf-club.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" >
+        <link href="/assets/css/final.css" rel="stylesheet">
+        <link href="/assets/css/placements.css" rel="stylesheet">
+
+
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1.0', { 'packages': ['corechart'] });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Company');
+            data.addColumn('number', 'No of Placed Students');
+            data.addRows([
+                ['Orion Innovation', 7],
+                ['Cognizant', 9],
+                ['Onebill', 4],
+                ['Multicoreware', 2],
+                ['IBM', 2],
+                ['LTI', 1],
+                ['Mistral Solutions', 1],
+                ['Zoho', 6],
+                ['CGI', 1],
+                ['PSG Software Technologies', 1],
+                ['TCS', 2],
+                ['Baton Systems', 3],
+                ['Datasphere Inc.', 2],
+                ['Incture', 1],
+                ['Mbit Wireless', 1],
+                ['Banfico', 1],
+                ['Wipro', 2],
+                ['LTTS', 3],
+                ['Robert Bosch', 4],
+                ['Tejas Networks', 1],
+                ['Optum', 1],
+                ['Deevia Software', 1],
+                ['HCL', 2]
+            ]);
+            // ---------------------------------------------------------------------
+            var data2 = new google.visualization.DataTable();
+            data2.addColumn('string', 'Company');
+            data2.addColumn('number', 'No of Placed Students');
+            data2.addRows([
+                ['Incture Technologies Pvt Ltd', 2],
+                ['Multicoreware', 2],
+                ['Zoho Corp Pvt Ltd', 2],
+                ['Flextronics Technologies', 2],
+                ['Aspire Systems', 3],
+                ['Onebill Software India Private limited ', 5],
+                ['Astrazeneca India Pvt Ltd', 5],
+                ['Bosch', 7],
+                ['Bosch Global Software Technologies', 15],
+                ['Deloitte', 1],
+                ['Ganit Inc', 1],
+                ['Exterro', 1],
+                ['Edgeverve Systems Ltd', 1],
+                ['5C Diagnostics', 1],
+                ['Tekizima India Solutions Pvt Ltd', 1],
+                ['Qualitest', 1]
+            ]);
+            // -------------------------------------------------------------------------
+            var data3 = new google.visualization.DataTable();
+            data3.addColumn('string', 'Year');
+            data3.addColumn('number', 'Placed Students');
+            data3.addRows([
+                ['2004', 1000],
+                ['2005', 1170],
+                ['2006', 860],
+                ['2007', 1030],
+                ['2008', 1250],
+                ['2009', 950],
+            ]);
+            // ------------------------------------------------------------------------
+            // ------------------------------------------------------------------------
+            var options = {
+                'title': '2022 Placed Students',
+                'width': '75%',
+                'height': '500px',
+                'is3D': true,
+                'legend': {
+                    textStyle: {
+                        color: 'black' // Change the legend text color
+                    }
+                },
+                'titleTextStyle': {
+                    color: 'red', // Change the title text color
+                    fontSize: 22 // Change the title font size (optional)
+                },
+                'backgroundColor': 'transparent'
+            };
+            // -----------------------------------------------------------------------
+            var options2 = {
+                'title': '2023 Placed Students',
+                'width': '100%',
+                'height': '500px',
+                'is3D': true,
+                'titleTextStyle': {
+                    color: 'red', // Change the title text color
+                    fontSize: 22 // Change the title font size (optional)
+                },
+                'legend': {
+                    textStyle: {
+                        color: 'black' // Change the legend text color
+                    }
+                },
+                'backgroundColor': 'transparent'
+            };
+            // -----------------------------------------------------------------------
+            var options3 = {
+                'title': 'Line Chart',
+                'width': '100%',
+                'height': '500px',
+                colors: ['Red'],
+                'backgroundColor': 'transparent',
+                'legend': {
+                    position: 'top',
+                    textStyle: {
+                        color: 'black' // Change the legend text color
+                    }
+                },
+                titleTextStyle: {
+                    color: '#FF0000', // Change the title text color to red
+                    fontSize: 22
+                },
+                hAxis: {
+                    title: 'Year',
+                    titleTextStyle: {
+                        color: '#00FF00' // Change the horizontal axis title text color to blue
+                    },
+                    textStyle: {
+                        color: 'black' // Change the horizontal axis labels text color to green
+                    }
+                },
+                vAxis: {
+                    title: 'Placed Students',
+                    titlePosition: 'in',
+                    fontSize: 10,
+                    titleTextStyle: {
+                        color: '#00FF00' // Change the vertical axis title text color to magenta
+                    },
+                    textStyle: {
+                        color: 'black' // Change the vertical axis labels text color to black
+                    }
+                },
+                chartArea: {
+                    top: 60, // Adjust the top margin to create more space for the title
+                    width: '60%', // Adjust the width of the chart area as needed
+                    height: '70%' // Adjust the height of the chart area as needed
+                },
+                series: {
+                    0: {
+                        lineWidth: 3
+                    }
+                }
+            };
+            // ---------------------------------------------------------------------------------------------
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+            var chart3 = new google.visualization.LineChart(document.getElementById('line_chart_div'));
+            function resizeCharts() {
+                var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                var chartWidth = screenWidth > 768 ? '100%' : '90%'; // Adjust as needed
+
+                chart.draw(data, { ...options, 'width': chartWidth });
+                chart2.draw(data2, { ...options2, 'width': chartWidth });
+                chart3.draw(data3, options3);
+            }
+
+            resizeCharts();
+            window.addEventListener('resize', resizeCharts);
+        }
+    </script>
+        
+
+    </head>
+    
+    <body>
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">                
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="/assets/images/logo.png" class="navbar-brand-image img-fluid" alt="Tiya Golf Club">
+                        <span class="navbar-brand-text">
+                            CSE Association
+                            <small>GCT-Coimbatore</small>
+                        </span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-3">
+                        <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#about">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#acheivements">Faculties</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">Events</a>
+                            </li>
+                            <!-- <li class="nav-item3">
+                                <a class="nav-link click-scroll" href="#section_4"></a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#place">Placements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_7">Alumini</a>
+                            </li>
+                            
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
+                            </li>
+
+                            
+                        </ul>
+
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <!-- <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">                
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Login</h5>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                
+                <div class="offcanvas-body d-flex flex-column">
+                    <form class="custom-form member-login-form" action="#" method="post" role="form">
+
+                        <div class="member-login-form-body">
+                            <div class="mb-4">
+                                <label class="form-label mb-2" for="member-login-number">Email ID</label>
+
+                                <input type="text" name="member-login-number" id="member-login-number" class="form-control" placeholder="11002560" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label mb-2" for="member-login-password">Password</label>
+
+                                <input type="password" name="member-login-password" id="member-login-password" pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="Password" required="">
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                              
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <div class="col-lg-5 col-md-7 col-8 mx-auto">
+                                <button type="submit" class="form-control">Login</button>
+                            </div> -->
+
+                            <!-- <div class="text-center my-4">
+                                <a href="#">Forgotten password?</a>
+                            </div>
+                        </div>
+                    </form> -->
+
+                    <!-- <div class="mt-auto mb-5">
+                        <p>
+                            <strong class="text-white me-3">Any Questions?</strong>
+
+                            <a href="#" class="contact-link">
+                            	9876543210
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D405B" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+            </div> -->
+            
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+
+                <div class="section-overlay"></div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D405B" fill-opacity="0.8" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
+
+                <div class="container">
+                    <div class="row">
+                        
+
+                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                            <br>
+                            <br>
+                            <br><br>
+                            <h2 class="text-white">Welcome to the CSE Association</h2>
+
+                            <h1 class="cd-headline rotate-1 text-white mb-4 pb-2">
+                                <!-- <span>Tiya is</span> -->
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible">Innovative</b>
+                                    <b>Creative</b>
+                                    <b>Success</b>
+                                </span>
+                            </h1>
+
+                            <div class="custom-btn-group">
+                                <a href="#about" class="btn custom-btn smoothscroll me-3" >About CSEA</a>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="ratio ratio-16x9">
+                                <!-- <iframe width="300" height="215" src="https://www.youtube.com/embed/EeX-djAX_Qc?si=kmXS5iq2E36y5M1z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                <iframe width="560" height="315" src="https://www.youtube.com/embed/MGNgbNGOzh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+                                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sSBBwMSZVVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="0.0000000000001" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg> -->
+            </section>
+            
+
+            <section id="about" class="about-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                            <div class="carousel-container">
+                                <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="card bg-violet text-white">
+                                                <div class="card-body">
+                                                    <h2 class="card-title" style="color: black;">About</h2>
+                                                    <p class="card-text">
+                                                        <ul id="card-te">
+                                                            <br>
+                                                           <li style="color: black;"> We the Department of Computer Science and Engineering ever since 1984 strive to create an ambience of academic excellencein which new ideas,
+                                                            research and scholarship flourish and from which the leaders and innovators of tomorrow emerge</li>
+                                                            <br><br>
+                                                             
+                                                            <li style="color: black;" >Accredited by the National Board of Accrediation for a period of 3 years, the computer science and engineering is one of the most eminent programme
+                                                            in GCT. The four year under graduate programme in Computer Science is intended to train the students in both advanced areas in the core courses and
+                                                            specialized topics in the emerging technology.</li><br><br>
+                                                             
+                                                            <li style="color: black;">It has become the pool for research scholars with  inclusion PhD courses in 1992. We have a team of highly qualified and dedicated teaching faculty
+                                                            well supported by a  group of Techincal support staff for keeping campus vibrant as a temple of knowledge under a self imposed discipline by one and all.</li>
+                                                              <br><br>
+                                                                  
+                                                            <li style="color: black;">  Our future techies, scientists, executives, entrepreneurs are nurtured and encouraged with creative approach. It has excellent infrastructure and
+                                                           facilities for students. It is the endeavor of the management to periodically migrate to the latest software and hardware to keep pace with ever changing needs
+                                                           with the industries so that our students come out with latest knowledge in both software and hardware
+                                                            </li><br><br>
+                                                           
+                                                            <li style="color: black;">  The necessary licensed software and internet facilities are available for all students round the clock. Besides
+                                                            imparting theoretical knowledge, the curriculum stresses on developing analytical stills, communication, problem solving, and teamwork abilities
+                                                            </li><br><br>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card bg-violet text-white">
+                                                <div class="card-body">
+                                                    <br>
+                                                    <h2 class="card-title" style="color: black;">Engineering Graduates will be able to :</h2>
+                                                    <br>
+                                                    <div class="card-text1">
+                                                        <ul>
+                                                            <li style="color: black;">
+                                                                <b>Gain engineering knowledge:</b> Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.
+                                                            </li><br>
+                                                            <li style="color: black;">
+                                                                <b>Problem analysis:</b> Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics,
+                                                            natural sciences, and engineering sciences.
+
+                                                            </li><br>
+                                                            <li style="color: black;">
+                                                                <b>Design/Development of solutions:</b> Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate 
+                                                            consideration for the public health and safety, and the cultural, societal, and environmental considerations.
+
+                                                            </li><br>
+                                                            <li style="color: black;">
+                                                                <b>Conduct investigations of complex problems:</b> Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of
+                                                            the information to provide valid conclusions.
+
+                                                            </li><br>
+                                                            <li style="color: black;">
+                                                                <b>Modern tool usage:</b> Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering 
+                                                            activities with an understanding of the limitations.
+
+                                                            </li><br>
+                                                            <li style="color: black;">
+                                                                <b>Life-long learning:</b> Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.
+                                                            </li>
+                                                            <br>
+                                                            <li style="color: black;">
+                                                                <b>Project management and finance:</b> Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work, as a member and leader in a team,
+                                                            to manage projects and in multidisciplinary environments.
+
+                                                            </li>
+                                                            <br>
+                                                        </ul>
+                                                        
+                                                           
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                               <!-- Rest of your HTML content -->
+
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#cardCarousel" data-bs-slide-to="1" class="active"></li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            
+            
+            
+
+
+            
+
+
+            <section id="acheivements" class="section-bg-image" >
+                <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(255, 255, 255, 1)" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path></svg>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <div class="section-bg-image-block">
+                                <h2 class="mb-lg-3">Acheivements</h2>
+
+                                <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <!-- <img src="sih2022.jpeg" class="d-block w-100" alt="Image 1"> -->
+                                            <img src="/assets/images/sih2022.jpeg" class="d-block w-100" alt="Image 1" width="600px" height="400px">
+
+                                            <br>
+                                            <h5>Smart India Hackathon Winners-2022 [Pune]</h5>
+                                            
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/assets/images/kavach.jpeg" class="d-block w-100" alt="Image 1" width="600px" height="400px">
+                                            <br>
+                                            
+                                            <h5>Kavach Finalist 2023 [Bhopal]</h5>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/assets/images/sih-team2.jpeg" class="d-block w-100" alt="Image 1" width="600px" height="400px">
+                                            <br>
+                                            
+                                            <h5>SIH Finalist 2022 [Hubballi]</h5>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/assets/images/she2022.jpg" class="d-block w-100" alt="Image 1" width="600px" height="400px">
+                                            <br>
+                                            
+                                            <h5>SHE(STAR HACK ERA) @GCT</h5>
+                                        </div>
+                                        <!-- Add more carousel items as needed -->
+                                    </div>
+                                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </a>
+                                </div>
+                            
+
+                               
+
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(255, 255, 255, 1)" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path></svg>
+            </section>
+
+
+            <section class="membership-section section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="sticky-header">Faculties</h1>
+                            <div class="mains">
+                                <div class="containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/Radhi_mam.jpg">
+                                            <img src="/assets/images/Radhi_mam.jpg" alt="">
+                                        </a>
+                                        
+                                        <div  class="title">
+                                            Dr. S. Rathi
+                                        </div>
+                                        <div class="place"><i>
+                                            Head Of the Department and Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        M.E.,Ph.D
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                
+                                            </div>
+                                            <div class="btn">
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:rathi@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:+919843190500"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/Rajasenbagam_mam.jpg">
+                                            <img src="/assets/images/Rajasenbagam_mam.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Dr.T.Rajasenbagam
+                                        </div>
+                                        <div class="place"><i> Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        M.E.,Ph.D
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                
+                                            </div>
+                                            <div class="btn">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:trajasenbagam@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9944345189"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/meena_mam.jpg">
+                                            <img src="/assets/images/meena_mam.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Dr.A.Meena Kowshalya
+                                        </div>
+                                        <div class="place"><i>
+                                            Associate Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        M.E.,Ph.D
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:meenakowsalya@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9585502131"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/muthuram_sir.png">
+                                            <img src="/assets/images/muthuram_sir.png" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Dr.R.Muthuram
+                                        </div>
+                                        <div class="place"><i>
+                                            Associate Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        ME.,Ph.D.,
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:muthuramrr@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9894599094"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/sumathi_mam.jpg">
+                                            <img src="/assets/images/sumathi_mam.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Ms.L.Sumathi
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        M.E
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:lsumathi@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9994018432"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="https://www.linkedin.com/in/sumathilinganathan/"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/gowri_shanker_sir.jpg">
+                                            <img src="/assets/images/gowri_shanker_sir.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.M.Gowrishankar
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        M.E
+                                        
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><br><li><a href="mailto:gowrishankar.m.it@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9894535347"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/ramya_mam.jpg">
+                                            <img src="/assets/images/ramya_mam.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mrs.N.Ramya
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        ME
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:ramya.n.cse@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:8870274892"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/gayathri_mam.jpg">
+                                            <img src="/assets/images/gayathri_mam.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Ms.C.Gayathri
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        ME
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:mail2gay3chinnu@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9629619429"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/arumugam_sir.jpg">
+                                            <img src="/assets/images/arumugam_sir.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.N.Arumugam
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        ME
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:arumugam.n.cse@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9791606345"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="https://www.linkedin.com/in/arumugam-n-b9661b187/"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/poovila_mam.png">
+                                            <img src="/assets/images/poovila_mam.png" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Ms.G.Poovila
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        ME
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:poovila.g.cse@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:8940331447"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="https://www.linkedin.com/in/g-poovila-30046480/"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/umarani_mam.jpg">
+                                            <img src="/assets/images/umarani_mam.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            P.Uma Rani
+                                        </div>
+                                        <div class="place"><i>
+                                            Assistant Professor</i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        ME
+                                        
+                                        <div class="buttons">
+                                            <div class="btn">
+                                                <!-- <button>Message</button> -->
+                                            </div>
+                                            <div class="btn">
+                                                <!-- <button>Following</button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <br><li><a href="mailto:pumarani90@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9894960270"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                            </div>
+
+                       
+                        
+                            
+                            
+                        </div>
+                </div>
+            </section>
+
+
+            <section class="events-section section-bg section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h2 class="mb-lg-3">Upcoming Events</h2>
+                        </div>
+
+                        <div class="row custom-block mb-3">
+                            <div class="col-lg-2 col-md-4 col-12 order-2 order-md-0 order-lg-0">
+                                <div class="custom-block-date-wrap d-flex d-lg-block d-md-block align-items-center mt-3 mt-lg-0 mt-md-0">
+                                    <h6 class="custom-block-date mb-lg-1 mb-0 me-3 me-lg-0 me-md-0">26</h6>
+                                    
+                                    <strong class="text-white">Sep 2023</strong>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-8 col-12 order-1 order-lg-0">
+                                <div class="custom-block-image-wrap">
+                                    <a href="event-detail.html">
+                                        <img src="/assets/images/professional-golf-player.jpg" class="custom-block-image img-fluid" alt="">
+
+                                        <i class="custom-block-icon bi-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12 order-3 order-lg-0">
+                                <div class="custom-block-info mt-2 mt-lg-0">
+                                    <a href="event-detail.html" class="events-title mb-3" style="color: black;"><b>LOGIN</b></a>
+
+                                    <p class="mb-0" style="color: black;">
+                                        Welcoming Juniors into Our Department
+                                        Every year, our department hosts a special event called LOGIN (Letting Juniors Get Oriented and INvited) to warmly welcome the incoming
+                                        junior members. This event serves as a platform to introduce the juniors to the department, foster a sense of belonging,
+                                        and provide valuable information about the department's culture, resources, and opportunities.
+                                    </p>
+
+                                    <div class="d-flex flex-wrap border-top mt-4 pt-3">
+
+                                        <div class="mb-4 mb-lg-0">
+                                            <div class="d-flex flex-wrap align-items-center mb-1">
+                                                <span class="custom-block-span">Location:</span>
+
+                                                <p class="mb-0" style="color: black;">CSE </p>
+                                            </div>
+
+                                            <div class="d-flex flex-wrap align-items-center">
+                                                <span class="custom-block-span"></span>
+
+                                                <p class="mb-0" style="color: black;"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center ms-lg-auto">
+                                            <a href="#" class="btn custom-btn" >Buy Ticket</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row custom-block custom-block-bg">
+                            <div class="col-lg-2 col-md-4 col-12 order-2 order-md-0 order-lg-0">
+                                <div class="custom-block-date-wrap d-flex d-lg-block d-md-block align-items-center mt-3 mt-lg-0 mt-md-0">
+                                    <h6 class="custom-block-date mb-lg-1 mb-0 me-3 me-lg-0 me-md-0">28</h6>
+                                    
+                                    <strong class="text-white">Dec 2023</strong>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-8 col-12 order-1 order-lg-0">
+                                <div class="custom-block-image-wrap">
+                                    <a href="event-detail.html">
+                                        <img src="/assets/images/girl-taking-selfie-with-friends-golf-field.jpg" class="custom-block-image img-fluid" alt="">
+
+                                        <i class="custom-block-icon bi-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12 order-3 order-lg-0">
+                                <div class="custom-block-info mt-2 mt-lg-0">
+                                    <a href="event-detail.html" class="events-title mb-3" style="color: black;"><b>SSQ</b></a>
+
+                                    <p class="mb-0" style="color: black;">
+                                        Soft Sem Quiz (SSQ) is a highly anticipated annual event hosted by our Computer Science and Engineering (CSE) department. It offers an engaging platform
+                                        to test and stimulate students' knowledge across a diverse range of technical and non-technical subjects related to the field.
+                                        SSQ seamlessly blends the thrill of a quiz competition with valuable opportunities for
+                                        learning, personal growth, and the promotion of healthy competition among participants.
+                                    </p>
+
+                                    <div class="d-flex flex-wrap border-top mt-4 pt-3">
+
+                                        <div class="mb-4 mb-lg-0">
+                                            <div class="d-flex flex-wrap align-items-center mb-1">
+                                                <span class="custom-block-span">Location:</span>
+
+                                                <p class="mb-0" style="color: black;">CSE</p>
+                                            </div>
+
+                                            <div class="d-flex flex-wrap align-items-center">
+                                                <span class="custom-block-span"></span>
+
+                                                <p class="mb-0" style="color: black;"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center ms-lg-auto">
+                                            <a href="#section_1" class="btn custom-btn">Buy Ticket</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row custom-block mb-3">
+                            <div class="col-lg-2 col-md-4 col-12 order-2 order-md-0 order-lg-0">
+                                <div class="custom-block-date-wrap d-flex d-lg-block d-md-block align-items-center mt-3 mt-lg-0 mt-md-0">
+                                    <h6 class="custom-block-date mb-lg-1 mb-0 me-3 me-lg-0 me-md-0">10</h6>
+                                    
+                                    <strong class="text-white">JAN 2024</strong>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-8 col-12 order-1 order-lg-0">
+                                <div class="custom-block-image-wrap">
+                                    <a href="event-detail.html">
+                                        <img src="/assets/images/professional-golf-player.jpg" class="custom-block-image img-fluid" alt="">
+
+                                        <i class="custom-block-icon bi-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12 order-3 order-lg-0">
+                                <div class="custom-block-info mt-2 mt-lg-0">
+                                    <a href="event-detail.html" class="events-title mb-3" style="color: black;"><b>INFOQUEST</b></a>
+
+                                    <p class="mb-0" style="color: black;">
+                                        InfoQuest(IQ) is a prestigious national-level intercollege technical symposium organized by the Computer Science and Engineering (CSE) Department.
+                                        This highly anticipated event brings together students, faculty, industry experts, and enthusiasts from across the country to showcase
+                                         their technical skills,exchange knowledge and foster innovation.Infoquest serves as a platform to inspire, challenge, and celebrate
+                                         the advancements in the field of computer science.
+                                    </p>
+
+                                    <div class="d-flex flex-wrap border-top mt-4 pt-3">
+
+                                        <div class="mb-4 mb-lg-0">
+                                            <div class="d-flex flex-wrap align-items-center mb-1">
+                                                <span class="custom-block-span">Location:</span>
+
+                                                <p class="mb-0" style="color: black;">CSE department</p>
+                                            </div>
+
+                                            <div class="d-flex flex-wrap align-items-center">
+                                                <span class="custom-block-span"></span>
+
+                                                <p class="mb-0" style="color: black;"></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center ms-lg-auto">
+                                            <a href="#" class="btn custom-btn">Buy Ticket</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="place">
+                <br><br><br>
+                <center>
+                    <h1 class="placementh1">PLACEMENT STATISTICS</h1>
+                </center>
+            
+                <div class="chart-container" id="chart_div"></div>
+                <div class="chart-container" id="chart_div2"></div>
+                <div class="chart-container" id="line_chart_container">
+                    <div id="line_chart_div" style="width: 100%; height: 500px; background: url('assets/background1.png');"></div>
+                </div>
+            </section>
+
+            <section class="membership-section section-padding" id="section_7">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="sticky-header">Notable Alumini</h1>
+                            <div class="mains">
+                                <div class="containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini1.jpg">
+                                            <img src="/assets/images/alumini1.jpg" alt="">
+                                        </a>
+                                        
+                                        <div  class="title">
+                                            Mr.Bobby Balachandran
+                                        </div>
+                                        <div class="place"><i>
+                                            Exterro is the fastest-growing software company.We combine everything corporations and legal firms, e-discovery project,
+                                            information governance, and mitigating risks into an integrated suite.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:rathi@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:+919843190500"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini2.jpg">
+                                            <img src="/assets/images/alumini2.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.Raj Madhuram
+                                        </div>
+                                        <div class="place"><i>C1X is a Silicon Valley-based digital advertising and marketing technology 
+                                            company that is building exactly what the company name suggests - A "Class One Exchange"​ for
+                                                premium advertisers, advertising agencies.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:trajasenbagam@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9944345189"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini3.jpg">
+                                            <img src="/assets/images/alumini3.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.Naveen Rajkumar
+                                        </div>
+                                        <div class="place"><i>
+                                            ISOutsource is a one-stop IT consulting and support solutions provider.
+                                            Mission is to provide outsourced technology support and consulting services that leave
+                                            you feeling happy, productive and supported.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:meenakowsalya@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9585502131"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini4.jpg">
+                                            <img src="/assets/images/alumini4.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.Basker Subramanian
+                                        </div>
+                                        <div class="place"><i>
+                                            Amagi is a global leader in cloud-based SaaS technology for broadcast and connected TV.
+                                            We enable content owners to launch, distribute and monetize live linear channels on connected TV and SVOD 
+                                            platforms.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:muthuramrr@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9894599094"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini5.jpg">
+                                            <img src="/assets/images/alumini5.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.Vidya Narayanan
+                                        </div>
+                                        <div class="place"><i>
+                                            Rizzle is an AI-powered video creation and editing tools for creators and businesses using just text and audio inputs. We've had a fantastic journey as  growing to over 75M downloads and 
+                                            34M monthly active users</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:lsumathi@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9994018432"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="https://www.linkedin.com/in/sumathilinganathan/"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini6.jpg">
+                                            <img src="/assets/images/alumini6.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.Booshan Rengachari
+                                        </div>
+                                        <div class="place"><i>
+                                            Booshan founded Finzly in 2012 with the mission to create a modern banking
+                                            experience. Also he managed International Technology at Well Fargo. He has served 
+                                            on the US Faster Payment Task Force.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><br><li><a href="mailto:gowrishankar.m.it@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9894535347"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini7.jpg">
+                                            <img src="/assets/images/alumini7.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Mr.Satish Dharmaraj
+                                        </div>
+                                        <div class="place"><i>
+                                            Satish Dharmaraj is an American entrepreneur, speaker, angel investor and venture 
+                                            capitalist, who currently serves as a general partner with Redpoint Ventures. In 2021, he was placed #6
+                                            on the Forbes Midas List.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:ramya.n.cse@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:8870274892"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini10.jpg">
+                                            <img src="/assets/images/alumini10.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Ms.Latha Narayanan
+                                        </div>
+                                        <div class="place"><i>
+                                            Latha Narayanan currently working as a 
+                                            Founder and Advisory Board at Nebula Youth Camps California,USA.And also she was the 
+                                            Founder and CEO of Shooting Stars Foundation.</i>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:mail2gay3chinnu@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9629619429"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini8.jpg">
+                                            <img src="/assets/images/alumini8.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Ms.Hema Annamalai
+                                        </div>
+                                        <div class="place"><i>
+                                            Hemalatha Annamalai, is one of the few women who have brought the revolutionary 
+                                            E-bikes model to India through her company Ampere Vehicles.And also she was an Disruptor, Investor
+                                            and Mentor for SME's.</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:arumugam.n.cse@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:9791606345"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="https://www.linkedin.com/in/arumugam-n-b9661b187/"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                <div class=" containers">
+                                    <div class="wrappers">
+                                        <a href="/assets/images/alumini9.jpg">
+                                            <img src="/assets/images/alumini9.jpg" alt="">
+                                        </a>
+                                        <div class="title">
+                                            Ms.Latha srinivasan
+                                        </div>
+                                        <div class="place"><i>
+                                            Latha Srinivasan currently works as
+                                            a Chippersage Education Pvt Ltd Founder and Director.Latha Srinivasan professional experience began in 
+                                            1983 and then she has changed 14 companies and 13 roles</i>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="icons">
+                                        <br><li><a href="mailto:poovila.g.cse@gct.ac.in"><span class="fa fa-envelope"></span></a></li>
+                                        <br><li><a href="tel:8940331447"><span class="fas fa-phone-square-alt"></span></a></li>
+                                        <br><li><a href="https://www.linkedin.com/in/g-poovila-30046480/"><span class="fab fa-linkedin"></span></a></li>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                       
+                        
+                            
+                            
+                        </div>
+                </div>
+            </section>
+
+
+            <section class="contact-section section-padding" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-12">
+                            <form onsubmit="handleContactUsFormSubmit" class="custom-form contact-form" role="form">
+                            <!-- <form action="#" method="post" class="custom-form contact-form" role="form"> -->
+                                <h2 class="mb-4 pb-2">Contact CSEA</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="full-name" id="full-namem" class="form-control" placeholder="Full Name" required="">
+                                            
+                                            <label for="floatingInput">Full Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12"> 
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="emailj" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+                                            
+                                            <label for="floatingInput">Email address</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="messagej" name="message" placeholder="Describe message here"></textarea>
+                                            
+                                            <label for="floatingTextarea">Message</label>
+                                        </div>
+
+                                        <button type="submit" class="form-control">Submit Form</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+
+                        <!-- <div class="col-lg-10 col-4"> -->
+                            <!-- <div class="contact-info mt-6">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-body">
+                                        <strong>Government college of Technology</strong>
+
+                                        <p class="mt-2 mb-1">
+                                            <a href="tel: 010-020-0340" class="contact-link">
+                                                (0422) - 2432221
+                                            </a>
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <a href="mailto:info@company.com" class="contact-link">
+                                                principal@gct.ac.in.
+                                            </a>
+                                        </p>
+                                    </div>
+
+                                    <div class="contact-info-footer">
+                                        <a href="#">Directions</a>
+                                    </div>
+                                </div>
+
+                                <img src="images/WorldMap.svg" class="img-fluid" alt="">
+                            </div> -->
+                        <!-- </div> -->
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                        <p class="copyright-text">Copyright © CSE</p>
+                    </div>
+
+                        <div class="col-lg-2 col-12 ms-auto">
+                            <ul class="social-icon mt-lg-5 mt-3 mb-4">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-youtube"></a>
+                                </li>
+                            </ul>
+                           
+                            
+                        </div>
+            </div>
+        
+
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#81B29A" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/jquery.sticky.js"></script>
+        <script src="/assets/js/click-scroll.js"></script>
+        <script src="/assets/js/animated-headline.js"></script>
+        <script src="/assets/js/modernizr.js"></script>
+        <script src="/assets/js/custom.js"></script>
+        <script>
+            const img = document.querySelector("img");
+            const icons = document.querySelector(".icons");
+            img.onclick = function () {
+                this.classList.toggle("active");
+                icons.classList.toggle("active");
+            }
+
+            document.getElementById("contact-us-form").addEventListener("submit", (e) => {
+                e.preventDefault()
+                console.log("submitting")
+                const name = document.getElementById("full-name").value
+                const email = document.getElementById("email").value
+                const message = document.getElementById("message").value
+                const data = {
+                    name,
+                    email,
+                    message
+                }
+                console.log(data)
+
+            })
+        </script>
+
+         <!-- <script src="/assets/js/bootstrap.min.js"></script>
+            <script src="/assets/js/jquery.min.js"></script> -->
+
+    </body>
+</html>
