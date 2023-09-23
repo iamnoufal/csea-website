@@ -2,22 +2,24 @@
 
 /* @media (max-width: 768px) {
     
-    .container {
+    .containers {
         width: 100%; 
     }
 } */
 
-.mains {
-    
+body {
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
+    /* padding: 1%; */
     text-align: center;
     background-image: url("assets/back_faculties1.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover;
-    
+    /* background: linear-gradient(45deg,hsla(168, 85%, 52%, 0.7),hsla(263, 88%, 45%, 0.7) 100%); */
+    /* background-image: hsla(217, 89%, 51%, 0.55); */
 }
 .mains {
     overflow-x: scroll;
@@ -31,43 +33,41 @@
     padding-right:10px;
 }
 @media (max-width: 768px) {
-    .mains {
-        /* margin: 5px;
-        font-size: 16px; */
-        display: grid; /* Use CSS grid */
+    /* .mains {
+        
+        display: grid; Use CSS grid
         grid-gap: 20px;
         flex-direction: column;
-        align-items: center;
+        align-items: center !important;
         justify-content: center;
         padding-top: 100px;
         padding-bottom: 10px;
-    }
-    .containers{
-        min-height:200px;
-        max-width:450px;
-        /* margin: 50px; */
-        margin: 10px 0;
-    /* margin-bottom: 100px; */
-
-        /* padding-bottom: 10/px; */
-        /* margin-bottom: px; */
-    }
-    /* .container:active {
-        height: 440px;
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.3);
-    min-width: 400px;
-        
     } */
-    .containers:hover {
-        height: 440px;
-        width: 100px;
+    .containers{
+        height: auto;
+        width: 350px;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.3);
         min-width: 400px;
     }
+
+    .containers .wrappers img.active {
+        height: auto;
+        width: 350px;
+        margin: 0px auto;
+        border: none;
+        border-radius: 5px;
+    }
+
+    /* .content {
+        color: whitesmoke;
+        padding: 1px 20px 10px 20px !important;
+        font-size: 20px;
+        margin-top: 10px;
+    } */
 }
+
+/* ----------------------------------------------------------------------------------- */
 .sticky-header{
     /* padding-top:0px; */
     margin: 0;
@@ -80,7 +80,7 @@
 
 
 .containers {
-    height: 240px;
+    height: 250px;
     /* width: 15%; */
     max-width: 60px;
     overflow: hidden;
@@ -180,7 +180,7 @@
 
 .containers .icons {
     position: relative;
-    margin-top: -425px;
+    margin-top: -435px;
     margin-left: 10px;
     list-style: none;
 }
@@ -208,7 +208,7 @@
     transition-delay: 0.2s;
 }
 
-.containers:hover .icons li:nth-child(3) {
+.containerss:hover .icons li:nth-child(3) {
     transition-delay: 0.4s;
 }
 
